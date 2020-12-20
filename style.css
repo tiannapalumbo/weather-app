@@ -1,3 +1,74 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  color: whitesmoke;
+  padding: 10px 20px 20px;
+}
+.search {
+  font-family: "Roboto Condensed", sans-serif;
+  color: whitesmoke;
+  font-weight: 300;
+}
+.cityname {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  color: whitesmoke;
+}
+.temperature1 {
+  font-size: 60px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+.date {
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+.units {
+  font-size: 20px;
+  vertical-align: text-top;
+}
+
+.day {
+  font-family: "Roboto Condensed", sans-serif;
+  color: whitesmoke;
+  font-weight: 300;
+}
+.btn-primary {
+  background-color: teal;
+}
+
 h1 {
-  color: violet;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  color: whitesmoke;
+}
+i {
+  font-size: 25px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: whitesmoke;
+}
+footer {
+  font-style: italic;
+  display: block;
+  margin: 0 auto;
+  font-size: x-small;
 }

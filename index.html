@@ -1,15 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/83cabd4104.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
-    <h1>
-       Hello!! 
-    </h1>
-    <script src="app.js"></script>
+    <div class="container">
+        </br>
+        <form class="search" id="search">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="entercity" aria-describedby="emailHelp"
+                            placeholder="Enter city">
+                        <small id="searchHelp" class="form-text text-muted">Search for any city around the world</small>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <button type="submit" class="btn btn-light">Search</button>
+                </div>
+            </div>
+
+        </form>
+        <button type="button" class="btn btn-outline-light btn-sm"> <span id="currentloc"> Current Location</button>
+        <hr>
+        <div class="gradient">
+            <h1 class="city-name"> <span id="name">
+                    Paris
+            </h1>
+            <div class="row">
+                <div class="col-6">
+
+                    <h2 class="date" id="date"> </h2>
+
+                    <div class="temperature1">
+                        <p> <span id="temperaturemain"> 20 </span>
+                            <span class="units">
+                                <a href="#" id="celcius-link">°C </a> |
+                                <a href="#" id="farenheit-link">°F </a>
+                            </span>
+                        </p>
+                    </div>
+
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>
+                            <span class="weathercategory"> Precipitation: </span> 15mm
+                        </li>
+                        <li>
+                            <span class="weathercategory"> Wind: </span> 10 km/hr
+                        </li>
+                        <li>
+                            <span class="weathercategory"> Humidity: </span> 20%
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </br>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-2">
+                <ul>
+                    <li>
+                        <h3 class="day">
+                            Mon
+                        </h3>
+                    </li>
+                    <li>
+                        10/2
+                    </li>
+                    <li>
+                        <i class="fas fa-sun"></i>
+                    </li>
+                    <li>
+                        15°C
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <ul>
+                    <li>
+                        <h3 class="day">
+                            Tue
+                        </h3>
+                    </li>
+                    <li>
+                        10/3
+                    </li>
+                    <li>
+                        <i class="fas fa-cloud-sun"></i>
+                    </li>
+                    <li>
+                        15°C
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-2">
+                <ul>
+                    <li>
+                        <h3 class="day">
+                            Wed
+                        </h3>
+                    </li>
+                    <li>
+                        10/4
+                    </li>
+                    <li>
+                        <i class="fas fa-cloud-showers-heavy"></i>
+                    </li>
+                    <li>
+                        15°C
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <ul>
+                    <li>
+                        <h3 class="day">
+                            Thu
+                        </h3>
+                    </li>
+                    <li>
+                        10/5
+                    </li>
+                    <li>
+                        <i class="far fa-snowflake"></i>
+                    </li>
+                    <li>
+                        15°C
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <ul>
+                    <h3 class="day">
+                        Fri
+                    </h3>
+                    <li>
+                        10/6
+                    </li>
+                    <li>
+                        <i class="fas fa-bolt"></i>
+                    </li>
+                    <li>
+                        15°C
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </br>
+        </hr>
+        </br>
+        <footer>
+            Open sourced by Tianna Palumbo
+        </footer>
+        <script src="src/index.js"></script>
+    </div>
 </body>
+
 </html>
