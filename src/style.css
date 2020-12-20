@@ -66,6 +66,11 @@ li {
   font-weight: 300;
   color: whitesmoke;
 }
+
+a:link {
+  color: teal;
+}
+
 footer {
   font-style: italic;
   display: block;
