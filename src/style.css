@@ -31,6 +31,13 @@
   color: whitesmoke;
 }
 
+.weatherdesc {
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  color: whitesmoke;
+}
+
 .units {
   font-size: 20px;
   vertical-align: text-top;
