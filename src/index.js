@@ -1,31 +1,11 @@
-let now = new Date();
-
-let h2 = document.querySelector("h2");
-
-let date = now.getDate();
-let hour = now.getHours();
-let minutes = now.getMinutes();
-
-let months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec"
-];
-let month = months[now.getMonth()];
-
-let days = ["Sunday", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-let day = days[now.getDay()];
-
-h2.innerHTML = `${day}, ${month} ${date} ${hour}:${minutes}`;
+function formatDate(timestamp) {
+  //calculate the date
+  let date = new Date(timestamp);
+  let hours = timestamp.getHours();
+  let minutes = date.getMinutes();
+  let day = date.getDay();
+return `${day} ${hours}:${minutes}`;
+}
 
 function showTemp(response) {
   let city = document.querySelector("#name");
@@ -35,11 +15,13 @@ function showTemp(response) {
   let descWind = document.querySelector("#wind");
   let temperature = Math.round(response.data.main.temp);
   let roundWind = Math.round(response.data.wind.speed)
+  let dateElement = document.querySelector("date");
   degrees.innerHTML = `${temperature}°`;
   description.innerHTML = `${response.data.weather[0].description}`;
   descHumidity.innerHTML = `${response.data.main.humidity}`;
   descWind.innerHTML = `${roundWind}`;
   city.innerHTML = `${response.data.name}`;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 function handleSubmit(event) {
   event.preventDefault();
