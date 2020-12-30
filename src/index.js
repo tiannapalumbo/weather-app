@@ -15,7 +15,7 @@ function showTemp(response) {
   let descWind = document.querySelector("#wind");
   let temperature = Math.round(response.data.main.temp);
   let roundWind = Math.round(response.data.wind.speed)
-  let dateElement = document.querySelector("date");
+  let dateElement = document.querySelector("#date");
   degrees.innerHTML = `${temperature}°`;
   description.innerHTML = `${response.data.weather[0].description}`;
   descHumidity.innerHTML = `${response.data.main.humidity}`;
