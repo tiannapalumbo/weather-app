@@ -31,9 +31,13 @@ function showTemp(response) {
   let city = document.querySelector("#name");
   let degrees = document.querySelector("#temperaturemain");
   let description = document.querySelector("#weatherdesc");
+  let wind = document.querySelector("#wind");
+  let humidity = document.querySelector("#humidity");
   let temperature = Math.round(response.data.main.temp);
   degrees.innerHTML = `${temperature}°`;
   description.innerHTML = `${response.data.weather[0].description}`;
+  wind.innerHTML = Math.round(response.data.main.wind.speed);
+  humidity.innerHTML = `${response.data.main.humidity}`;
   city.innerHTML = `${response.data.name}`;
 }
 function handleSubmit(event) {
