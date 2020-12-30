@@ -33,7 +33,7 @@ function showTemp(response) {
   let description = document.querySelector("#weatherdesc");
   let temperature = Math.round(response.data.main.temp);
   degrees.innerHTML = `${temperature}°`;
-  description.innerHTML = `${response.data.weather[0].description}°`;
+  description.innerHTML = `${response.data.weather[0].description}`;
   city.innerHTML = `${response.data.name}`;
 }
 function handleSubmit(event) {
