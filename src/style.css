@@ -52,15 +52,13 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style: none;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 300;
   color: whitesmoke;
-}
-
-li:first.letter {
   text-transform: capitalize;
 }
 
