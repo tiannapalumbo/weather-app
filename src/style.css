@@ -68,8 +68,14 @@ li::first-letter {
 a:link {
   color: teal;
 }
+
+a:visited {
+  color: teal;
+}
+
 a:hover {
   color: whitesmoke;
+  text-decoration: none;
 }
 
 footer {
