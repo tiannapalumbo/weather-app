@@ -30,7 +30,7 @@ function formatHours(timestamp) {
 
 function showTemp(response) {
   let city = document.querySelector("#name");
-  let degrees = document.querySelector("#temperaturemain");
+  let temperatureElement = document.querySelector("#temperaturemain");
   let description = document.querySelector("#weatherdesc");
   let descHumidity = document.querySelector("#humidity");
   let descWind = document.querySelector("#wind");
@@ -40,7 +40,7 @@ function showTemp(response) {
 
   celciusTemperature = response.data.main.temp;
 
-  degrees.innerHTML = Math.round(celciusTemperature);
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
   description.innerHTML = `${response.data.weather[0].description}`;
   descHumidity.innerHTML = `${response.data.main.humidity}`;
   descWind.innerHTML = `${roundWind}`;
@@ -83,9 +83,15 @@ locationButton.addEventListener("click", getPosition);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
+  let temperatureElement = document.querySelector("temperaturemain");
   let fahrenheitTemperature = (celciusTemperature * 9 / 5) + 32;
-  let temperature = document.querySelector("temperaturemain");
-  temperature.innerHTML = Math.round(fahrenheitTemperature);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("temperaturemain");
+ temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
