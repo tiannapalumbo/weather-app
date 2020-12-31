@@ -83,17 +83,15 @@ locationButton.addEventListener("click", getPosition);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("temperaturemain");
-  let fahrenheitTemperature = (celciusTemperature * 9 / 5) + 32;
+  let temperatureElement = document.querySelector("#temperaturemain");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("temperaturemain");
- temperatureElement.innerHTML = Math.round(celciusTemperature);
+  let temperatureElement = document.querySelector("#temperaturemain");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
