@@ -34,14 +34,13 @@ function showTemp(response) {
   let description = document.querySelector("#weatherdesc");
   let descHumidity = document.querySelector("#humidity");
   let descWind = document.querySelector("#wind");
-  let temperature = Math.round(response.data.main.temp);
   let roundWind = Math.round(response.data.wind.speed)
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-celciusTemperature = `${temperature}`;
+  celciusTemperature = response.data.main.temp;
 
-  degrees.innerHTML = `${temperature}`;
+  degrees.innerHTML = Math.round(celciusTemperature);
   description.innerHTML = `${response.data.weather[0].description}`;
   descHumidity.innerHTML = `${response.data.main.humidity}`;
   descWind.innerHTML = `${roundWind}`;
