@@ -37,12 +37,16 @@ function showTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let roundWind = Math.round(response.data.wind.speed)
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
   degrees.innerHTML = `${temperature}°`;
   description.innerHTML = `${response.data.weather[0].description}`;
   descHumidity.innerHTML = `${response.data.main.humidity}`;
   descWind.innerHTML = `${roundWind}`;
   city.innerHTML = `${response.data.name}`;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function handleSubmit(event) {
   event.preventDefault();
