@@ -38,6 +38,9 @@ function showTemp(response) {
   let roundWind = Math.round(response.data.wind.speed)
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+
+celciusTemperature = `${temperature}`;
+
   degrees.innerHTML = `${temperature}`;
   description.innerHTML = `${response.data.weather[0].description}`;
   descHumidity.innerHTML = `${response.data.main.humidity}`;
@@ -48,6 +51,9 @@ function showTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+let celciusTemperature = null;
+
 function handleSubmit(event) {
   event.preventDefault();
   let apiKey = "6e8ce867bc46f41d0e8f2b0e41afed08";
@@ -75,3 +81,15 @@ function getPosition(event) {
 }
 let locationButton = document.querySelector("#currentloc");
 locationButton.addEventListener("click", getPosition);
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9 / 5) + 32;
+  let temperature = document.querySelector("temperaturemain");
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+
+
+let fahrenheitLink = document.querySelector("#fahrenheitLink");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
