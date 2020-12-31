@@ -88,7 +88,5 @@ function displayFahrenheitTemperature(event) {
   temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-
-
 let fahrenheitLink = document.querySelector("#fahrenheitLink");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
