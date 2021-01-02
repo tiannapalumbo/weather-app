@@ -22,7 +22,7 @@
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
   color: whitesmoke;
-  text-align: center;
+  text-align: left;
 }
 
 .units {
@@ -44,7 +44,7 @@
   font-size: 20px;
   font-weight: 300;
   color: whitesmoke;
-  text-align: left;
+  text-align: center;
 }
 
 .weather-forecast img {
