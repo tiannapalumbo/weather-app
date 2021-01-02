@@ -23,7 +23,6 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="entercity" aria-describedby="emailHelp"
                             placeholder="Enter city">
-                        <small id="searchHelp" class="form-text text-muted">Search for a city</small>
                     </div>
                 </div>
                 <div class="col-4">
@@ -44,20 +43,19 @@
             </ul>
                     <div class="row">
                 <div class="col-6">
+                    <img 
+                    src = "http://openweathermap.org/img/wn/10d@2x.png"
+                    alt = "Clear"
+                    id = "icon"
+                    class = "float-left"/>
                     <div class="temperature1">
-                        <p> <span id="temperaturemain"> 20 </span>
+                        <p> <span id="temperaturemain"> 20</span>
                             <span class="units">
                                 <a href="#" id="celsius-link">°C </a> |
                                 <a href="#" id="fahrenheit-link">°F </a>
                             </span>
                         </p>
                     </div>
-                    <img 
-                    src = "http://openweathermap.org/img/wn/10d@2x.png"
-                    alt = "Clear"
-                    id = "icon"
-                    class = "float-left"
-                />
                 </div>
                 <div class="col-6">
                     <ul>
@@ -70,14 +68,12 @@
                     </ul>
                 </div>
             </div>
-            </br>
         </div>
         <hr>
         <div class="row weather-forecast" id="forecast"> 
         </div>
         </br>
         </hr>
-        </br>
         <footer>
             <a href="https://github.com/tiannapalumbo/weather-app" id="githublink" target="_blank"> Open-source code </a>
              by Tianna Palumbo

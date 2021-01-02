@@ -2,7 +2,13 @@
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  background-image: linear-gradient(
+    to top,
+    #0c3483 0%,
+    #a2b6df 100%,
+    #6b8cce 100%,
+    #a2b6df 100%
+  );
   color: whitesmoke;
   padding: 10px 20px 20px;
 }
@@ -34,9 +40,6 @@
   font-family: "Roboto Condensed", sans-serif;
   color: whitesmoke;
   font-weight: 300;
-}
-.btn-primary {
-  background-color: teal;
 }
 
 .float-left {
@@ -97,11 +100,11 @@ li::first-letter {
 }
 
 a:link {
-  color: teal;
+  color: darkorange;
 }
 
 a:visited {
-  color: teal;
+  color: darkorange;
 }
 
 a:hover {
@@ -116,5 +119,5 @@ footer {
   font-size: x-small;
 }
 .githublink {
-  color: teal;
+  color: lightsalmon;
 }
